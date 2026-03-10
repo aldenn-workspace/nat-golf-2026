@@ -9,20 +9,29 @@
   "tournaments": [
     {
       "id": "nat-jr-pga-qual-1",
-      "name": "Jr PGA Qualifier 1",
+      "name": "Jr PGA Qualifier 1 — Kemper Lakes",
       "org": "Jr PGA",
-      "venue": "Kempler Lakes",
+      "venue": "Kemper Lakes Golf Club",
       "venueConfirmed": true,
-      "city": "Illinois",
+      "city": "Long Grove",
+      "state": "IL",
       "status": "registered",
       "types": ["illinois"],
+      "signup": {
+        "opens": "2026-01-05",
+        "deadline": "2026-05-25",
+        "deadlineDisplay": "Mon May 25, 2026",
+        "timeDisplay": "11:59 PM CDT",
+        "done": true,
+        "notes": "Confirmed. Same event as Tad."
+      },
       "tournament": {
         "start": "2026-06-01",
         "end": "2026-06-02",
         "displayDate": "Mon Jun 1 – Tue Jun 2, 2026",
         "dateConfidence": "from-schedule"
       },
-      "notes": ""
+      "notes": "Same tournament as Tad. Both confirmed."
     },
     {
       "id": "nat-isja-qual",
