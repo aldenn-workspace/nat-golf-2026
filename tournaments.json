@@ -2,15 +2,8 @@
   "meta": {
     "player": "Nat Collett",
     "season": 2026,
-    "college": null,
-    "lastUpdated": "2026-03-09",
-    "researchedBy": "Aldenn",
-    "dateConfidenceKey": {
-      "confirmed-2026": "Verified from official 2026 tournament website",
-      "from-schedule": "Taken from Mike's schedule notes — treat as reliable",
-      "estimated": "Estimated based on typical annual timing",
-      "tbd": "Not yet announced for 2026 — check linked website"
-    }
+    "lastUpdated": "2026-03-10",
+    "researchedBy": "Aldenn"
   },
   "deadlines": [],
   "tournaments": [
@@ -18,81 +11,88 @@
       "id": "nat-jr-pga-qual-1",
       "name": "Jr PGA Qualifier 1",
       "org": "Jr PGA",
-      "course": "Kempler Lakes",
-      "location": "Illinois",
-      "startDate": "2026-06-01",
-      "endDate": "2026-06-02",
-      "days": 2,
+      "venue": "Kempler Lakes",
+      "venueConfirmed": true,
+      "city": "Illinois",
       "status": "registered",
-      "statusLabel": "Confirmed",
-      "holes": null,
-      "url": null,
-      "notes": "",
-      "dateConfidence": "from-schedule"
+      "types": ["illinois"],
+      "tournament": {
+        "start": "2026-06-01",
+        "end": "2026-06-02",
+        "displayDate": "Mon Jun 1 – Tue Jun 2, 2026",
+        "dateConfidence": "from-schedule"
+      },
+      "notes": ""
     },
     {
       "id": "nat-isja-qual",
       "name": "ISJA Qualifier",
       "org": "ISJA",
-      "course": "Heritage Oaks",
-      "location": "Illinois",
-      "startDate": "2026-06-10",
-      "endDate": "2026-06-10",
-      "days": 1,
+      "venue": "Heritage Oaks",
+      "venueConfirmed": true,
+      "city": "Illinois",
       "status": "registered",
-      "statusLabel": "Confirmed",
-      "holes": null,
-      "url": null,
-      "notes": "",
-      "dateConfidence": "from-schedule"
+      "types": ["illinois"],
+      "tournament": {
+        "start": "2026-06-10",
+        "end": "2026-06-10",
+        "displayDate": "Wed Jun 10, 2026",
+        "dateConfidence": "from-schedule"
+      },
+      "notes": ""
     },
     {
       "id": "nat-jr-pga-qual-2",
       "name": "Jr PGA Qualifier 2",
       "org": "Jr PGA",
-      "course": "Bull Valley",
-      "location": "Illinois",
-      "startDate": "2026-06-29",
-      "endDate": "2026-06-30",
-      "days": 2,
+      "venue": "Bull Valley",
+      "venueConfirmed": true,
+      "city": "Illinois",
       "status": "registered",
-      "statusLabel": "Confirmed",
-      "holes": null,
-      "url": null,
-      "notes": "",
-      "dateConfidence": "from-schedule"
+      "types": ["illinois"],
+      "tournament": {
+        "start": "2026-06-29",
+        "end": "2026-06-30",
+        "displayDate": "Mon Jun 29 – Tue Jun 30, 2026",
+        "dateConfidence": "from-schedule"
+      },
+      "notes": ""
     },
     {
       "id": "nat-majgt-klein-creek",
       "name": "MAJGT at Klein Creek",
       "org": "MAJGT",
-      "course": "Klein Creek Golf Club",
-      "location": "Winfield, IL",
-      "startDate": "2026-07-15",
-      "endDate": "2026-07-16",
-      "days": 2,
+      "venue": "Klein Creek Golf Club",
+      "venueConfirmed": true,
+      "city": "Winfield",
+      "state": "IL",
       "status": "registered",
-      "statusLabel": "Confirmed",
-      "holes": null,
-      "url": null,
-      "notes": "",
-      "dateConfidence": "from-schedule"
+      "types": ["illinois"],
+      "tournament": {
+        "start": "2026-07-15",
+        "end": "2026-07-16",
+        "displayDate": "Wed Jul 15 – Thu Jul 16, 2026",
+        "dateConfidence": "from-schedule"
+      },
+      "notes": ""
     },
     {
       "id": "nat-majgt-countryside",
       "name": "MAJGT at Countryside",
       "org": "MAJGT",
-      "course": "Countryside Golf Club",
-      "location": "Mundelein, IL",
-      "startDate": "2026-07-20",
-      "endDate": "2026-07-21",
-      "days": 2,
+      "venue": "Countryside Golf Club",
+      "venueConfirmed": true,
+      "city": "Mundelein",
+      "state": "IL",
       "status": "waiting",
-      "statusLabel": "Waitlist",
-      "holes": null,
-      "url": null,
-      "notes": "Currently on waiting list",
-      "dateConfidence": "from-schedule"
+      "types": ["illinois"],
+      "tournament": {
+        "start": "2026-07-20",
+        "end": "2026-07-21",
+        "displayDate": "Mon Jul 20 – Tue Jul 21, 2026",
+        "dateConfidence": "from-schedule"
+      },
+      "notes": "Currently on waiting list"
     }
   ]
 }
