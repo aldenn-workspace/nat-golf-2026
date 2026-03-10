@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "player": "Nat Collett",
+    "season": 2026,
+    "college": null,
+    "lastUpdated": "2026-03-09",
+    "researchedBy": "Aldenn",
+    "dateConfidenceKey": {
+      "confirmed-2026": "Verified from official 2026 tournament website",
+      "from-schedule": "Taken from Mike's schedule notes — treat as reliable",
+      "estimated": "Estimated based on typical annual timing",
+      "tbd": "Not yet announced for 2026 — check linked website"
+    }
+  },
+  "deadlines": [],
+  "tournaments": [
+    {
+      "id": "nat-jr-pga-qual-1",
+      "name": "Jr PGA Qualifier 1",
+      "org": "Jr PGA",
+      "course": "Kempler Lakes",
+      "location": "Illinois",
+      "startDate": "2026-06-01",
+      "endDate": "2026-06-02",
+      "days": 2,
+      "status": "accepted",
+      "statusLabel": "Accepted",
+      "holes": null,
+      "url": null,
+      "notes": "",
+      "dateConfidence": "from-schedule"
+    },
+    {
+      "id": "nat-isja-qual",
+      "name": "ISJA Qualifier",
+      "org": "ISJA",
+      "course": "Heritage Oaks",
+      "location": "Illinois",
+      "startDate": "2026-06-10",
+      "endDate": "2026-06-10",
+      "days": 1,
+      "status": "accepted",
+      "statusLabel": "Accepted",
+      "holes": null,
+      "url": null,
+      "notes": "",
+      "dateConfidence": "from-schedule"
+    },
+    {
+      "id": "nat-jr-pga-qual-2",
+      "name": "Jr PGA Qualifier 2",
+      "org": "Jr PGA",
+      "course": "Bull Valley",
+      "location": "Illinois",
+      "startDate": "2026-06-29",
+      "endDate": "2026-06-30",
+      "days": 2,
+      "status": "accepted",
+      "statusLabel": "Accepted",
+      "holes": null,
+      "url": null,
+      "notes": "",
+      "dateConfidence": "from-schedule"
+    },
+    {
+      "id": "nat-majgt-klein-creek",
+      "name": "MAJGT at Klein Creek",
+      "org": "MAJGT",
+      "course": "Klein Creek Golf Club",
+      "location": "Winfield, IL",
+      "startDate": "2026-07-15",
+      "endDate": "2026-07-16",
+      "days": 2,
+      "status": "accepted",
+      "statusLabel": "Accepted",
+      "holes": null,
+      "url": null,
+      "notes": "",
+      "dateConfidence": "from-schedule"
+    },
+    {
+      "id": "nat-majgt-countryside",
+      "name": "MAJGT at Countryside",
+      "org": "MAJGT",
+      "course": "Countryside Golf Club",
+      "location": "Mundelein, IL",
+      "startDate": "2026-07-20",
+      "endDate": "2026-07-21",
+      "days": 2,
+      "status": "waitlist",
+      "statusLabel": "Waiting List",
+      "holes": null,
+      "url": null,
+      "notes": "Currently on waiting list",
+      "dateConfidence": "from-schedule"
+    }
+  ]
+}
