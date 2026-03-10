@@ -321,7 +321,6 @@ h1{font-size:clamp(2rem,5vw,2.9rem);font-weight:800;letter-spacing:-1.5px;line-h
 
 <header>
   <a href="https://mountathletics.com/sports/mens-golf" target="_blank" rel="noopener" title="Mount St. Mary's Men's Golf">
-    <img class="mount-logo" src="./assets/mount-logo.png" alt="The Mount logo">
   </a>
   <div class="eyebrow">2026 Season Calendar</div>
   <h1>Nat Collett ⛳</h1>
@@ -636,7 +635,7 @@ function renderActions(data){
   items.sort((a,b)=>+b.urgent - +a.urgent);
   const el=document.getElementById('actionList');
   if(!items.length){
-    el.innerHTML=`<div style="color:var(--c-reg);font-size:13px;font-weight:600">✅ Current deadlines handled. Next up: Northern Jr signup opens Mar 1 @ 7am CT.</div>`;
+    el.innerHTML=`<div style="color:var(--c-reg);font-size:13px;font-weight:600">✅ Current deadlines handled. Nothing coming up.</div>`;
     return;
   }
   el.innerHTML=items.map(it=>{
