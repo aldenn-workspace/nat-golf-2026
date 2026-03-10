@@ -557,13 +557,14 @@ function buildEntries(data){
   }
   // Tournament entries
   for(const t of(data.tournaments||[])){
-    if(t.tournament&&t.tournament.start){
-      entries.push({type:'tournament',date:t.tournament.start,t});
+    const tStart=t.startDate||(t.tournament&&t.tournament.start);
+    if(tStart){
+      entries.push({type:'tournament',date:tStart,t});
     }
     // Signup deadline strip in a DIFFERENT month from tournament
-    if(t.signup&&(t.signup.deadline||t.signup.opens)&&t.tournament&&t.tournament.start){
+    if(t.signup&&(t.signup.deadline||t.signup.opens)&&tStart){
       const dlDate=t.signup.deadline||t.signup.opens;
-      if(dlDate&&mon(dlDate)!==mon(t.tournament.start)){
+      if(dlDate&&mon(dlDate)!==mon(tStart)){
         entries.push({type:'deadline',date:dlDate,dl:{
           id:'dl-'+t.id,
           label:t.name+' — '+(t.signup.deadline?'Apply Deadline':'Signup Opens'),
@@ -814,12 +815,52 @@ function focusTournamentFromHash(){
   });
 }
 
+// ── NORMALIZE flat-JSON tournaments to expected shape ─────────────────
+function normalizeData(data){
+  for(const t of(data.tournaments||[])){
+    // Venue
+    if(!t.venue&&t.course) t.venue=t.course;
+    if(t.venue) t.venueConfirmed=true;
+    // City / State from location string e.g. "Winfield, IL" or "Illinois"
+    if(!t.city&&t.location){
+      const parts=t.location.split(',').map(s=>s.trim());
+      if(parts.length>=2){t.city=parts[0];t.state=parts[1];}
+      else{t.state=parts[0];}
+    }
+    // Nested tournament date block
+    if(!t.tournament&&t.startDate){
+      const start=t.startDate;
+      const end=t.endDate||t.startDate;
+      let displayDate;
+      if(start===end){
+        displayDate=fmtD(start);
+      } else {
+        const [sy,sm,sd]=start.split('-').map(Number);
+        const [,em,ed]=end.split('-').map(Number);
+        const s=new Date(sy,sm-1,sd);
+        const e=new Date(sy,em-1,ed);
+        const mo=s.toLocaleDateString('en-US',{month:'short'});
+        const emo=e.toLocaleDateString('en-US',{month:'short'});
+        displayDate=mo===emo
+          ?`${DOW[s.getDay()]} ${mo} ${sd}–${DOW[e.getDay()]} ${ed}, ${sy}`
+          :`${DOW[s.getDay()]} ${mo} ${sd} – ${DOW[e.getDay()]} ${emo} ${ed}, ${sy}`;
+      }
+      t.tournament={start,end,displayDate};
+    }
+    // Website
+    if(!t.website&&t.url) t.website=t.url;
+    // Types array default
+    if(!t.types) t.types=[];
+  }
+  return data;
+}
+
 // ── INIT ──────────────────────────────────────────────────────────────
 async function init(){
   try{
     const res=await fetch('./tournaments.json');
     if(!res.ok)throw new Error(`HTTP ${res.status}`);
-    gData=await res.json();
+    gData=normalizeData(await res.json());
   }catch(e){
     document.getElementById('cal').innerHTML=`<div class="empty"><div class="eico">⚠️</div><p>Failed to load data: ${e.message}</p></div>`;
     return;
