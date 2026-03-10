@@ -52,20 +52,29 @@
     },
     {
       "id": "nat-jr-pga-qual-2",
-      "name": "Jr PGA Qualifier 2",
+      "name": "Jr PGA Qualifier 2 — Bull Valley",
       "org": "Jr PGA",
-      "venue": "Bull Valley",
+      "venue": "Bull Valley Golf Club",
       "venueConfirmed": true,
-      "city": "Illinois",
+      "city": "Woodstock",
+      "state": "IL",
       "status": "registered",
       "types": ["illinois"],
+      "signup": {
+        "opens": "2026-01-05",
+        "deadline": "2026-06-22",
+        "deadlineDisplay": "Mon Jun 22, 2026",
+        "timeDisplay": "11:59 PM CDT",
+        "done": true,
+        "notes": "Confirmed. Same event as Tad."
+      },
       "tournament": {
         "start": "2026-06-29",
         "end": "2026-06-30",
         "displayDate": "Mon Jun 29 – Tue Jun 30, 2026",
-        "dateConfidence": "from-schedule"
+        "dateConfidence": "confirmed-2026"
       },
-      "notes": ""
+      "notes": "Same tournament as Tad. Both confirmed."
     },
     {
       "id": "nat-majgt-klein-creek",
