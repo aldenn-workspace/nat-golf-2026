@@ -48,7 +48,7 @@ server.on('error', err => {
   process.exit(1);
 });
 
-server.listen(PORT, () => {
+server.listen(PORT, '127.0.0.1', () => {
   console.log(`\n⛳  Tad Collett 2026 Season Calendar`);
   console.log(`🌐  http://localhost:${PORT}\n`);
 });
